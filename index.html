@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Quick Trip Train</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Moment.js Reference -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/moment.min.js"></script>
+
+</head>
+
+<body>
+    <div class = "container">
+      <div class="jumbotron">
+        <h1 class="text-center">Quick Trip Train Schedule</h1>
+        <h3 class="text-center">Current Train Arrivals and Times can be found below</h3>
+      </div>
+    </div>
+  
+
+    <div class="container">
+      <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Current Train Schedule</div>
+         <!-- Table -->
+          <table class="table" id='train-table'>
+            <!--Table for the current Train Schedule-->
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+      <div class="panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Add Train</div>
+        <form id="newTrainForm">
+          <div class="form-group">
+            <label class="col-form-label" for="trainNameInput">Train Name</label>
+            <input type="text" class="form-control" id="name-input" placeholder="Train input">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label" for="roleInput">Destination</label>
+            <input type="text" class="form-control" id="destination-input" placeholder="Destination input">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label" for="startDateInput">First Train Time (HH:mm - military time)</label>
+            <input type="text" class="form-control" id="firstTrain-input" placeholder="First Train Time (HH:mm - military time) ">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label" for="monthlyRateInput">Fequency (min)</label>
+            <input type="text" class="form-control" id="frequency-input" placeholder="Frequecy in (min)">
+          </div>
+          <button class="btn btn-default" id="add-user-btn" type="submit">Submit</button>
+        </form>
+      </div>
+
+    </div>
+<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+</body>
+
+</html>
